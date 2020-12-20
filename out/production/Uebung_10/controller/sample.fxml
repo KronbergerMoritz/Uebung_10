@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
-<GridPane alignment="center" hgap="10" vgap="10" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/11.0.1" fx:controller="controller.Controller">
+<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.Controller">
    <columnConstraints>
       <ColumnConstraints />
       <ColumnConstraints />
@@ -19,28 +18,27 @@
    <rowConstraints>
       <RowConstraints />
       <RowConstraints />
+      <RowConstraints />
    </rowConstraints>
    <children>
-      <ListView id="listview" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
-      <Button id="btn_1" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="1" translateY="25.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <Button id="btn_0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="0" translateY="75.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <Button id="btn_4" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="4" translateY="-25.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <Button id="btn_7" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="7" translateY="-75.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-      <Button id="btn_komma" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="," translateY="75.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-      <Button id="btn_2" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="2" translateY="25.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-      <Button id="btn_5" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="5" translateY="-25.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-      <Button id="btn_6" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="8" translateY="-75.0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-      <Button id="btn_3" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="3" translateY="25.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-      <Button id="btn_9" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="9" translateY="-75.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-      <Button id="btn_switch" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="x&lt;-&gt;y" translateY="75.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-      <Button id="btn_6" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="6" translateY="-25.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-      <Label id="lcalc" prefHeight="40.0" prefWidth="200.0" text="Calculate ..." />
-      <Button id="btn_enter" mnemonicParsing="false" prefHeight="50.0" prefWidth="104.0" text="Enter" translateY="-75.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-      <Button id="btn_clear" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="C" translateY="-25.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-      <Button id="btn_clearall" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="CE" translateX="50.0" translateY="-25.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-      <Button id="btn_+" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="+" translateY="25.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-      <Button id="btn_-" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="-" translateX="50.0" translateY="25.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-      <Button id="btn_*" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="*" translateY="75.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-      <Button id="btn_/" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" text="/" translateX="50.0" translateY="75.0" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+      <ListView fx:id="listview" prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2" />
+      <Button fx:id="btn_1" mnemonicParsing="false" onAction="#handle_btn" prefHeight="50.0" prefWidth="50.0" text="1" translateY="25.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Button fx:id="btn_0" mnemonicParsing="false" onAction="#handle_btn" prefHeight="50.0" prefWidth="50.0" text="0" translateY="75.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Button fx:id="btn_4" mnemonicParsing="false" onAction="#handle_btn" prefHeight="50.0" prefWidth="50.0" text="4" translateY="-25.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Button fx:id="btn_7" mnemonicParsing="false" onAction="#handle_btn" prefHeight="50.0" prefWidth="50.0" text="7" translateY="-75.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+      <Button fx:id="btn_komma" mnemonicParsing="false" onAction="#handle_btn" prefHeight="50.0" prefWidth="50.0" text="," translateY="75.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Button fx:id="btn_2" mnemonicParsing="false" onAction="#handle_btn" prefHeight="50.0" prefWidth="50.0" text="2" translateY="25.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Button fx:id="btn_5" mnemonicParsing="false" onAction="#handle_btn" prefHeight="50.0" prefWidth="50.0" text="5" translateY="-25.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Button fx:id="btn_8" mnemonicParsing="false" onAction="#handle_btn" prefHeight="50.0" prefWidth="50.0" text="8" translateY="-75.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+      <Button fx:id="btn_3" mnemonicParsing="false" onAction="#handle_btn" prefHeight="50.0" prefWidth="50.0" text="3" translateY="25.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+      <Button fx:id="btn_9" mnemonicParsing="false" onAction="#handle_btn" prefHeight="50.0" prefWidth="50.0" text="9" translateY="-75.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+      <Button fx:id="btn_6" mnemonicParsing="false" onAction="#handle_btn" prefHeight="50.0" prefWidth="50.0" text="6" translateY="-25.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+      <Button fx:id="btn_enter" mnemonicParsing="false" onAction="#handle_btn" prefHeight="50.0" prefWidth="104.0" text="Enter" translateY="-75.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+      <Button fx:id="btn_clear" mnemonicParsing="false" onAction="#handle_btn" prefHeight="50.0" prefWidth="103.0" text="C" translateY="-25.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+      <Button fx:id="btn_plus" mnemonicParsing="false" onAction="#handle_btn" prefHeight="50.0" prefWidth="50.0" text="+" translateY="25.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+      <Button fx:id="btn_minus" mnemonicParsing="false" onAction="#handle_btn" prefHeight="50.0" prefWidth="50.0" text="-" translateX="50.0" translateY="25.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+      <Button fx:id="btn_mal" mnemonicParsing="false" onAction="#handle_btn" prefHeight="50.0" prefWidth="50.0" text="*" translateY="75.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+      <Button fx:id="btn_divid" mnemonicParsing="false" onAction="#handle_btn" prefHeight="50.0" prefWidth="50.0" text="/" translateX="50.0" translateY="75.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+      <TextField fx:id="t_field" editable="false" promptText="Calculate ..." GridPane.rowIndex="1" />
    </children>
 </GridPane>
