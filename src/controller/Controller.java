@@ -1,10 +1,10 @@
 package controller;
 
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.scene.input.MouseEvent;
 
 public class Controller {
 
@@ -50,7 +50,6 @@ public class Controller {
     @FXML
     private Button btn_clear;
 
-
     @FXML
     private Button btn_plus;
 
@@ -67,55 +66,88 @@ public class Controller {
     private TextField t_field;
 
     @FXML
-    void handle_btn(ActionEvent event) {
-    if(event.getSource() == btn_1)
-    {
-        t_field.setText(t_field.getText() + "1");
+    void btn_0(MouseEvent event) {
+
     }
-    else if(event.getSource() == btn_2)
-    {
-            t_field.setText(t_field.getText() + "2");
+
+    @FXML
+    void btn_1(MouseEvent event) {
+
     }
-    else if(event.getSource() == btn_3)
-    {
-        t_field.setText(t_field.getText() + "3");
+
+    @FXML
+    void btn_2(MouseEvent event) {
+
     }
-    else if(event.getSource() == btn_4)
-    {
-        t_field.setText(t_field.getText() + "4");
+
+    @FXML
+    void btn_3(MouseEvent event) {
+
     }
-    else if(event.getSource() == btn_5)
-    {
-        t_field.setText(t_field.getText() + "5");
+
+    @FXML
+    void btn_4(MouseEvent event) {
+
     }
-    else if(event.getSource() == btn_6)
-    {
-        t_field.setText(t_field.getText() + "6");
+
+    @FXML
+    void btn_5(MouseEvent event) {
+
     }
-    else if(event.getSource() == btn_7)
-    {
-        t_field.setText(t_field.getText() + "7");
+
+    @FXML
+    void btn_6(MouseEvent event) {
+
     }
-    else if(event.getSource() == btn_8)
-    {
-        t_field.setText(t_field.getText() + "8");
+
+    @FXML
+    void btn_7(MouseEvent event) {
+
     }
-    else if(event.getSource() == btn_9)
-    {
-        t_field.setText(t_field.getText() + "9");
+
+    @FXML
+    void btn_8(MouseEvent event) {
+
     }
-    else if(event.getSource() == btn_0)
-    {
-        t_field.setText(t_field.getText() + "0");
+
+    @FXML
+    void btn_9(MouseEvent event) {
+
     }
-    else if(event.getSource() == btn_komma)
-    {
-        t_field.setText(t_field.getText() + ",");
+
+    @FXML
+    void btn_clear(MouseEvent event) {
+
     }
-    else if(event.getSource() == btn_clear)
-    {
-        t_field.setText(" ");
+
+    @FXML
+    void btn_divid(MouseEvent event) {
+
     }
+
+    @FXML
+    void btn_enter(MouseEvent event) {
+
+    }
+
+    @FXML
+    void btn_komma(MouseEvent event) {
+
+    }
+
+    @FXML
+    void btn_minus(MouseEvent event) {
+
+    }
+
+    @FXML
+    void btn_multi(MouseEvent event) {
+
+    }
+
+    @FXML
+    void btn_plus(MouseEvent event) {
+
     }
 
 }
