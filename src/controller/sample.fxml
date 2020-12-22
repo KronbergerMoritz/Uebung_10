@@ -33,7 +33,7 @@
       <Button fx:id="btn_3" mnemonicParsing="false" onMouseClicked="#btn_3" prefHeight="50.0" prefWidth="50.0" text="3" translateY="25.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
       <Button fx:id="btn_9" mnemonicParsing="false" onMouseClicked="#btn_9" prefHeight="50.0" prefWidth="50.0" text="9" translateY="-75.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
       <Button fx:id="btn_6" mnemonicParsing="false" onMouseClicked="#btn_6" prefHeight="50.0" prefWidth="50.0" text="6" translateY="-25.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-      <Button fx:id="btn_enter" mnemonicParsing="false" onMouseClicked="#btn_enter" prefHeight="50.0" prefWidth="104.0" text="Enter" translateY="-75.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+      <Button fx:id="btn_enter" mnemonicParsing="false" onAction="#btn_enter" prefHeight="50.0" prefWidth="104.0" text="Enter" translateY="-75.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
       <Button fx:id="btn_clear" mnemonicParsing="false" onMouseClicked="#btn_clear" prefHeight="50.0" prefWidth="103.0" text="C" translateY="-25.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
       <Button fx:id="btn_plus" mnemonicParsing="false" onMouseClicked="#btn_plus" prefHeight="50.0" prefWidth="50.0" text="+" translateY="25.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />
       <Button fx:id="btn_minus" mnemonicParsing="false" onMouseClicked="#btn_minus" prefHeight="50.0" prefWidth="50.0" text="-" translateX="50.0" translateY="25.0" GridPane.columnIndex="4" GridPane.rowIndex="2" />

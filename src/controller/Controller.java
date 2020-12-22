@@ -1,5 +1,6 @@
 package controller;
 
+import calc.calc;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
@@ -7,6 +8,8 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
 public class Controller {
+
+    private calc calc = new calc();
 
     @FXML
     private ListView<?> listview;
@@ -67,27 +70,28 @@ public class Controller {
 
     @FXML
     void btn_0(MouseEvent event) {
+        t_field.setText(t_field.getText() + "0");
 
     }
 
     @FXML
     void btn_1(MouseEvent event) {
-
+        t_field.setText(t_field.getText() + "1");
     }
 
     @FXML
     void btn_2(MouseEvent event) {
-
+        t_field.setText(t_field.getText() + "2");
     }
 
     @FXML
     void btn_3(MouseEvent event) {
-
+        t_field.setText(t_field.getText() + "3");
     }
 
     @FXML
     void btn_4(MouseEvent event) {
-
+        t_field.setText(t_field.getText() + "4");
     }
 
     @FXML
@@ -117,17 +121,21 @@ public class Controller {
 
     @FXML
     void btn_clear(MouseEvent event) {
-
+        t_field.setText("");
+        calc.clearStack();
     }
 
-    @FXML
-    void btn_divid(MouseEvent event) {
-
-    }
 
     @FXML
-    void btn_enter(MouseEvent event) {
-
+    private void btn_enter()
+    {
+        String input = t_field.getText();
+        if(input.isEmpty() == false)
+        {
+            double number = Double.parseDouble(input);
+            calc.pushStack(number);
+            t_field.setText(calc.getStackList());
+        }
     }
 
     @FXML
@@ -136,18 +144,41 @@ public class Controller {
     }
 
     @FXML
-    void btn_minus(MouseEvent event) {
+    void btn_divid(MouseEvent event) {
+    btn_enter();
+    if(calc.divid() == true)
+    {
+        t_field.setText(calc.getStackList());
+    }
+    }
 
+
+    @FXML
+    void btn_minus(MouseEvent event) {
+    btn_enter();
+    if(calc.subtract() == true)
+    {
+        t_field.setText(calc.getStackList());
+    }
     }
 
     @FXML
     void btn_multi(MouseEvent event) {
-
+    btn_enter();
+    if(calc.multiply() == true)
+    {
+        t_field.setText(calc.getStackList());
+    }
     }
 
     @FXML
     void btn_plus(MouseEvent event) {
-
+        btn_enter();
+        if(calc.add() == true)
+        {
+            t_field.setText(calc.getStackList());
+        }
     }
+
 
 }
