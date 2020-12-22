@@ -1,8 +1,8 @@
 package calc;
-
 import java.util.Stack;
 
 public class calc {
+
 
     private Stack<Double> stack = new Stack<>();
 

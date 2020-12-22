@@ -4,6 +4,7 @@ import calc.calc;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
@@ -25,9 +26,6 @@ public class Controller {
 
     @FXML
     private Button btn_7;
-
-    @FXML
-    private Button btn_komma;
 
     @FXML
     private Button btn_2;
@@ -69,6 +67,9 @@ public class Controller {
     private TextField t_field;
 
     @FXML
+    private TextArea t_output;
+
+    @FXML
     void btn_0(MouseEvent event) {
         t_field.setText(t_field.getText() + "0");
 
@@ -96,32 +97,33 @@ public class Controller {
 
     @FXML
     void btn_5(MouseEvent event) {
-
+        t_field.setText(t_field.getText() + "5");
     }
 
     @FXML
     void btn_6(MouseEvent event) {
-
+        t_field.setText(t_field.getText() + "6");
     }
 
     @FXML
     void btn_7(MouseEvent event) {
-
+        t_field.setText(t_field.getText() + "7");
     }
 
     @FXML
     void btn_8(MouseEvent event) {
-
+        t_field.setText(t_field.getText() + "8");
     }
 
     @FXML
     void btn_9(MouseEvent event) {
-
+        t_field.setText(t_field.getText() + "9");
     }
 
     @FXML
     void btn_clear(MouseEvent event) {
         t_field.setText("");
+        t_output.setText("");
         calc.clearStack();
     }
 
@@ -134,13 +136,9 @@ public class Controller {
         {
             double number = Double.parseDouble(input);
             calc.pushStack(number);
-            t_field.setText(calc.getStackList());
+            t_field.setText("");
+            t_output.setText(calc.getStackList());
         }
-    }
-
-    @FXML
-    void btn_komma(MouseEvent event) {
-
     }
 
     @FXML
@@ -148,7 +146,7 @@ public class Controller {
     btn_enter();
     if(calc.divid() == true)
     {
-        t_field.setText(calc.getStackList());
+        t_output.setText(calc.getStackList());
     }
     }
 
@@ -158,7 +156,7 @@ public class Controller {
     btn_enter();
     if(calc.subtract() == true)
     {
-        t_field.setText(calc.getStackList());
+        t_output.setText(calc.getStackList());
     }
     }
 
@@ -167,7 +165,7 @@ public class Controller {
     btn_enter();
     if(calc.multiply() == true)
     {
-        t_field.setText(calc.getStackList());
+        t_output.setText(calc.getStackList());
     }
     }
 
@@ -176,7 +174,7 @@ public class Controller {
         btn_enter();
         if(calc.add() == true)
         {
-            t_field.setText(calc.getStackList());
+            t_output.setText(calc.getStackList());
         }
     }
 
